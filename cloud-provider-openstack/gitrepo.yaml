@@ -1,0 +1,14 @@
+kind: GitRepo
+apiVersion: fleet.cattle.io/v1alpha1
+metadata:
+  name: helm-external
+  namespace: fleet-default
+spec:
+  repo: https://github.com/thomasferrandiz/fleet-openstack.git
+  paths:
+  - cloud-provider-openstack/chart
+  targets:
+  - name: dev
+    clusterSelector:
+      matchLabels:
+        type: openstack

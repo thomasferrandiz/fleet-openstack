@@ -1,0 +1,22 @@
+namespace: fleet-mc-helm-external-example
+helm:
+  repo: https://kubernetes.github.io/cloud-provider-openstack
+  version: "2.27.1"
+  chart: openstack-cloud-controller-manager
+  releaseName: openstack-cloud-controller-manager
+  
+targetCustomizations:
+- name: openstack
+  helm:
+    values:
+      cloudConfig:
+        global:
+          auth-url: https://engcloud.prv.suse.net:5000/v3
+          username: tferrandiz
+          password: ""
+        loadbalancer:
+          floating-network-id: 8f6b659b-14b4-48b3-9c61-9c7bafabc04c
+  clusterSelector:
+    matchLabels:
+      type: openstack
+
