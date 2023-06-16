@@ -5,6 +5,7 @@ metadata:
   namespace: fleet-default
 spec:
   repo: https://github.com/thomasferrandiz/fleet-openstack.git
+  branch: main
   paths:
   - cloud-provider-openstack/chart
   targets:
