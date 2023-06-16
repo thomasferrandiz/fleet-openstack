@@ -1,4 +1,4 @@
-namespace: fleet-mc-helm-external-example
+defaultNamespace: kube-system
 helm:
   repo: https://kubernetes.github.io/cloud-provider-openstack
   version: "2.27.1"
