@@ -13,5 +13,5 @@ spec:
   - name: dev
     clusterSelector:
       matchLabels:
-        type: openstack
-        ccm-enabled: "true"
+        type: "openstack"
+        use-ccm: "enabled"
