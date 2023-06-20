@@ -7,9 +7,11 @@ spec:
   repo: https://github.com/thomasferrandiz/fleet-openstack.git
   branch: main
   paths:
+  - openstack-secret
   - cloud-provider-openstack/chart
   targets:
   - name: dev
     clusterSelector:
       matchLabels:
         type: openstack
+        ccm-enabled: true
